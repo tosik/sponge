@@ -27,10 +27,17 @@ app.configure('production', function(){
 });
 
 // Routes
+var title = 'Sponge';
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Express'
+    title: title
+  });
+});
+
+app.get('/islands', function(req, res){
+  res.render('islands/index', {
+    title: title
   });
 });
 
